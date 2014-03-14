@@ -18,38 +18,47 @@ namespace PerfSuite.Test
         public static void TestRun()
         {
             //one line execution unit test engine
-            
             var result = new TestExcecutionEngine().Collect().Execute().Container;
 
+            Console.WriteLine(string.Format("Status: Failed: {0} Passed: {1} Inconclusive: {2} ({3}ms)",
+               result.FailedCounter(),
+               result.PassedCounter(),
+               result.InconclusiveCounter(),
+               result.ElapsedMilliseconds));
 
+            result.TestCategorys.ForEach(c => c.AllTests.ToList().ForEach(t =>
+            {
+                Console.WriteLine(string.Format("{0} [{1}] {2} ({3}ms)",
+                     t.Name,
+                     t.Status.ToString(),
+                     t.Message,
+                     t.ElapsedMilliseconds));
+            }));
 
-
-
-            TestExcecutionEngine engine = new TestExcecutionEngine();
-            var container = engine.Collect().Container;
-            Serialize<TestContainer>(container, "file.xml");
-            engine.Container = Deserialize<TestContainer>("file.xml");
-            var con = engine.Execute().Container;
-            Serialize<TestContainer>(con, "result.xml");
-
-            Console.ForegroundColor = ConsoleColor.Gray;
-            Console.WriteLine(Environment.NewLine+"ElapsedMilliseconds: " + con.ElapsedMilliseconds + "ms");
-            Console.Write("Status: ");
-
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.Write(" Failed: " + con.FailedCounter());
-
-            Console.ForegroundColor = ConsoleColor.DarkGreen;
-            Console.Write(" Passed: " + con.PassedCounter());
-
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.Write(" Inconclusive: " + con.InconclusiveCounter());
-
-          
-            
             Console.WriteLine("\r\n\r\npress any key...");
-
             Console.ReadKey();
+
+            //TestExcecutionEngine engine = new TestExcecutionEngine();
+            //var container = engine.Collect().Container;
+            //Serialize<TestContainer>(container, "file.xml");
+            //engine.Container = Deserialize<TestContainer>("file.xml");
+            //var con = engine.Execute().Container;
+            //Serialize<TestContainer>(con, "result.xml");
+
+            //Console.ForegroundColor = ConsoleColor.Gray;
+            //Console.WriteLine(Environment.NewLine + "ElapsedMilliseconds: " + con.ElapsedMilliseconds + "ms");
+            //Console.Write("Status: ");
+
+            //Console.ForegroundColor = ConsoleColor.Red;
+            //Console.Write(" Failed: " + con.FailedCounter());
+
+            //Console.ForegroundColor = ConsoleColor.DarkGreen;
+            //Console.Write(" Passed: " + con.PassedCounter());
+
+            //Console.ForegroundColor = ConsoleColor.Yellow;
+            //Console.Write(" Inconclusive: " + con.InconclusiveCounter());
+
+           
         }
 
         static void Main(string[] args)
@@ -162,7 +171,7 @@ namespace PerfSuite.Test
                 Console.WriteLine(cat.Name + "(" + cat.Name + ") [" + cat.Type + "]");
                 foreach (var test in cat.AllTests)
                 {
-                    if(test.Status.IsFailed())
+                    if (test.Status.IsFailed())
                         Console.ForegroundColor = ConsoleColor.Red;
                     else if (test.Status.IsPassed())
                         Console.ForegroundColor = ConsoleColor.DarkGreen;
@@ -170,7 +179,7 @@ namespace PerfSuite.Test
                         Console.ForegroundColor = ConsoleColor.Yellow;
                     else
                         Console.ForegroundColor = ConsoleColor.Blue;
-                    
+
                     Console.WriteLine(test.Name + "(" + test.Status.ToString() + ") [" + test.Message + "] - " + test.ElapsedMilliseconds + "ms");
                 }
             }
