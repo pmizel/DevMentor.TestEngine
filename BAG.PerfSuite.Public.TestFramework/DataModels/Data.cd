@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BAG.PerfSuite.Public.TestFramework.DataModels.TestCategory">
+    <Position X="4" Y="1" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIgAACAAAAAACQAAAAAAIIAAQAACAAAAAA=</HashCode>
+      <FileName>DataModels\TestCategory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BAG.PerfSuite.Public.TestFramework.DataModels.TestContainer">
+    <Position X="0.75" Y="1" Width="3" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataModels\TestContainer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BAG.PerfSuite.Public.TestFramework.DataModels.TestUnit">
+    <Position X="6.5" Y="1" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAQIgCMAAAAAAAAQAAAAAAAAAAABAIAAAAAA=</HashCode>
+      <FileName>DataModels\TestUnit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="BAG.PerfSuite.Public.TestFramework.DataModels.TestStatus">
+    <Position X="6.5" Y="4.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAoAAAAAAAAAAAAAAAAAAAAAAAAAAIQABAAAIEAAgA=</HashCode>
+      <FileName>DataModels\TestStatus.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

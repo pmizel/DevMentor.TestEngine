@@ -1,0 +1,5 @@
+C:\Users\Dark\Dropbox\BAG Labs Solution\DevMentor.TestEngine\BAG.PerfSuite.Public.TestFramework\bin\Debug\BAG.PerfSuite.Public.TestFramework.dll
+C:\Users\Dark\Dropbox\BAG Labs Solution\DevMentor.TestEngine\BAG.PerfSuite.Public.TestFramework\bin\Debug\BAG.PerfSuite.Public.TestFramework.pdb
+C:\Users\Dark\Dropbox\BAG Labs Solution\DevMentor.TestEngine\BAG.PerfSuite.Public.TestFramework\obj\Debug\BAG.PerfSuite.Public.TestFramework.dll
+C:\Users\Dark\Dropbox\BAG Labs Solution\DevMentor.TestEngine\BAG.PerfSuite.Public.TestFramework\obj\Debug\BAG.PerfSuite.Public.TestFramework.pdb
+C:\Users\Dark\Dropbox\BAG Labs Solution\DevMentor.TestEngine\BAG.PerfSuite.Public.TestFramework\obj\Debug\BAG.PerfSuite.Public.TestFramework.csprojResolveAssemblyReference.cache

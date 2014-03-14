@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<TestContainer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TestCategorys>
+    <TestCategory>
+      <Test>
+        <TestUnit Enabled="true">
+          <MethodInfo>MethodInconclusive</MethodInfo>
+          <Name>MethodInconclusive</Name>
+          <Description>Beschreibung MethodInconclusive</Description>
+          <Message>Assert.Inconclusive &lt;Mein Text...&gt;</Message>
+          <Thread>4</Thread>
+          <Exception>System.Reflection.TargetInvocationException: Ein Aufrufziel hat einen Ausnahmefehler verursacht. ---&gt; BAG.PerfSuite.Public.TestFramework.AssertInconclusiveException: Assert.Inconclusive &lt;Mein Text...&gt;
+   bei BAG.PerfSuite.Public.TestFramework.Assert.Inconclusive(String message, Object[] parameters) in c:\Users\Dark\Dropbox\BAG Labs Solution\DevMentor.TestEngine\BAG.PerfSuite.Public.TestFramework\Assert.cs:Zeile 663.
+   bei BAG.PerfSuite.Public.TestFramework.Assert.Inconclusive(String message) in c:\Users\Dark\Dropbox\BAG Labs Solution\DevMentor.TestEngine\BAG.PerfSuite.Public.TestFramework\Assert.cs:Zeile 643.
+   bei PerfSuiteTest.PerfSuiteTestClass.MethodInconclusive() in c:\Users\Dark\Dropbox\BAG Labs Solution\DevMentor.TestEngine\PerfSuiteTest\PerfSUiteTestClass.cs:Zeile 26.
+   --- Ende der internen Ausnahmestapelüberwachung ---
+   bei System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   bei System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   bei System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   bei System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   bei BAG.PerfSuite.Public.TestFramework.Engine.Executor.&lt;Execute&gt;b__0(TestCategory cat) in c:\Users\Dark\Dropbox\BAG Labs Solution\DevMentor.TestEngine\BAG.PerfSuite.Public.TestFramework\Engine\Executor.cs:Zeile 34.</Exception>
+          <ElapsedMilliseconds>407</ElapsedMilliseconds>
+          <ExpectedExceptions />
+          <Status>Inconclusive</Status>
+        </TestUnit>
+        <TestUnit Enabled="true">
+          <MethodInfo>MethodSuccess</MethodInfo>
+          <Name>MethodSuccess</Name>
+          <Description>Beschreibung MethodSuccess</Description>
+          <Thread>4</Thread>
+          <ElapsedMilliseconds>403</ElapsedMilliseconds>
+          <ExpectedExceptions />
+          <Status>Passed</Status>
+        </TestUnit>
+        <TestUnit Enabled="true">
+          <MethodInfo>MethodAreEqual</MethodInfo>
+          <Name>MethodAreEqual</Name>
+          <Description />
+          <Message>Assert.AreEqual AreEqualFailMsgSollte gleich sein... 2 3</Message>
+          <Thread>4</Thread>
+          <Exception>System.Reflection.TargetInvocationException: Ein Aufrufziel hat einen Ausnahmefehler verursacht. ---&gt; BAG.PerfSuite.Public.TestFramework.AssertFailedException: Assert.AreEqual AreEqualFailMsgSollte gleich sein... 2 3
+   bei BAG.PerfSuite.Public.TestFramework.Assert.HandleFailure(String assertionName, String message) in c:\Users\Dark\Dropbox\BAG Labs Solution\DevMentor.TestEngine\BAG.PerfSuite.Public.TestFramework\Assert.cs:Zeile 700.
+   bei BAG.PerfSuite.Public.TestFramework.Assert.AreEqual[T](T expected, T actual, String message, Object[] parameters) in c:\Users\Dark\Dropbox\BAG Labs Solution\DevMentor.TestEngine\BAG.PerfSuite.Public.TestFramework\Assert.cs:Zeile 156.
+   bei BAG.PerfSuite.Public.TestFramework.Assert.AreEqual[T](T expected, T actual, String message) in c:\Users\Dark\Dropbox\BAG Labs Solution\DevMentor.TestEngine\BAG.PerfSuite.Public.TestFramework\Assert.cs:Zeile 139.
+   bei PerfSuiteTest.PerfSuiteTestClass.MethodAreEqual() in c:\Users\Dark\Dropbox\BAG Labs Solution\DevMentor.TestEngine\PerfSuiteTest\PerfSUiteTestClass.cs:Zeile 42.
+   --- Ende der internen Ausnahmestapelüberwachung ---
+   bei System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   bei System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   bei System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   bei System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   bei BAG.PerfSuite.Public.TestFramework.Engine.Executor.&lt;Execute&gt;b__0(TestCategory cat) in c:\Users\Dark\Dropbox\BAG Labs Solution\DevMentor.TestEngine\BAG.PerfSuite.Public.TestFramework\Engine\Executor.cs:Zeile 34.</Exception>
+          <ElapsedMilliseconds>403</ElapsedMilliseconds>
+          <ExpectedExceptions />
+          <Status>Failed</Status>
+        </TestUnit>
+        <TestUnit Enabled="true">
+          <MethodInfo>MethodFail</MethodInfo>
+          <Name>MethodFail</Name>
+          <Description />
+          <Message>Assert.Fail Fail weil absicht...</Message>
+          <Thread>4</Thread>
+          <Exception>System.Reflection.TargetInvocationException: Ein Aufrufziel hat einen Ausnahmefehler verursacht. ---&gt; BAG.PerfSuite.Public.TestFramework.AssertFailedException: Assert.Fail Fail weil absicht...
+   bei BAG.PerfSuite.Public.TestFramework.Assert.HandleFailure(String assertionName, String message) in c:\Users\Dark\Dropbox\BAG Labs Solution\DevMentor.TestEngine\BAG.PerfSuite.Public.TestFramework\Assert.cs:Zeile 700.
+   bei BAG.PerfSuite.Public.TestFramework.Assert.HandleFail(String assertionName, String message, Object[] parameters) in c:\Users\Dark\Dropbox\BAG Labs Solution\DevMentor.TestEngine\BAG.PerfSuite.Public.TestFramework\Assert.cs:Zeile 676.
+   bei BAG.PerfSuite.Public.TestFramework.Assert.Fail(String message, Object[] parameters) in c:\Users\Dark\Dropbox\BAG Labs Solution\DevMentor.TestEngine\BAG.PerfSuite.Public.TestFramework\Assert.cs:Zeile 630.
+   bei BAG.PerfSuite.Public.TestFramework.Assert.Fail(String message) in c:\Users\Dark\Dropbox\BAG Labs Solution\DevMentor.TestEngine\BAG.PerfSuite.Public.TestFramework\Assert.cs:Zeile 622.
+   bei PerfSuiteTest.PerfSuiteTestClass.MethodFail() in c:\Users\Dark\Dropbox\BAG Labs Solution\DevMentor.TestEngine\PerfSuiteTest\PerfSUiteTestClass.cs:Zeile 48.
+   --- Ende der internen Ausnahmestapelüberwachung ---
+   bei System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   bei System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   bei System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   bei System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   bei BAG.PerfSuite.Public.TestFramework.Engine.Executor.&lt;Execute&gt;b__0(TestCategory cat) in c:\Users\Dark\Dropbox\BAG Labs Solution\DevMentor.TestEngine\BAG.PerfSuite.Public.TestFramework\Engine\Executor.cs:Zeile 34.</Exception>
+          <ElapsedMilliseconds>1</ElapsedMilliseconds>
+          <ExpectedExceptions />
+          <Status>Failed</Status>
+        </TestUnit>
+        <TestUnit Enabled="true">
+          <MethodInfo>MethodAreSame</MethodInfo>
+          <Name>MethodAreSame</Name>
+          <Description />
+          <Message>Assert.AreSame Oh Oh</Message>
+          <Thread>4</Thread>
+          <Exception>System.Reflection.TargetInvocationException: Ein Aufrufziel hat einen Ausnahmefehler verursacht. ---&gt; BAG.PerfSuite.Public.TestFramework.AssertFailedException: Assert.AreSame Oh Oh
+   bei BAG.PerfSuite.Public.TestFramework.Assert.HandleFailure(String assertionName, String message) in c:\Users\Dark\Dropbox\BAG Labs Solution\DevMentor.TestEngine\BAG.PerfSuite.Public.TestFramework\Assert.cs:Zeile 700.
+   bei BAG.PerfSuite.Public.TestFramework.Assert.HandleFail(String assertionName, String message, Object[] parameters) in c:\Users\Dark\Dropbox\BAG Labs Solution\DevMentor.TestEngine\BAG.PerfSuite.Public.TestFramework\Assert.cs:Zeile 676.
+   bei BAG.PerfSuite.Public.TestFramework.Assert.AreSame(Object expected, Object actual, String message, Object[] parameters) in c:\Users\Dark\Dropbox\BAG Labs Solution\DevMentor.TestEngine\BAG.PerfSuite.Public.TestFramework\Assert.cs:Zeile 110.
+   bei BAG.PerfSuite.Public.TestFramework.Assert.AreSame(Object expected, Object actual, String message) in c:\Users\Dark\Dropbox\BAG Labs Solution\DevMentor.TestEngine\BAG.PerfSuite.Public.TestFramework\Assert.cs:Zeile 93.
+   bei PerfSuiteTest.PerfSuiteTestClass.MethodAreSame() in c:\Users\Dark\Dropbox\BAG Labs Solution\DevMentor.TestEngine\PerfSuiteTest\PerfSUiteTestClass.cs:Zeile 55.
+   --- Ende der internen Ausnahmestapelüberwachung ---
+   bei System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   bei System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   bei System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   bei System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   bei BAG.PerfSuite.Public.TestFramework.Engine.Executor.&lt;Execute&gt;b__0(TestCategory cat) in c:\Users\Dark\Dropbox\BAG Labs Solution\DevMentor.TestEngine\BAG.PerfSuite.Public.TestFramework\Engine\Executor.cs:Zeile 34.</Exception>
+          <ElapsedMilliseconds>403</ElapsedMilliseconds>
+          <ExpectedExceptions />
+          <Status>Failed</Status>
+        </TestUnit>
+        <TestUnit Enabled="false">
+          <MethodInfo>TestMethodIgnore</MethodInfo>
+          <Name>TestMethodIgnore</Name>
+          <Description />
+          <ElapsedMilliseconds>0</ElapsedMilliseconds>
+          <ExpectedExceptions />
+          <Status>None</Status>
+        </TestUnit>
+      </Test>
+      <TestInitialize>
+        <TestUnit Enabled="true">
+          <MethodInfo>MethodInit</MethodInfo>
+          <Name>MethodInit</Name>
+          <Description />
+          <Thread>4</Thread>
+          <ElapsedMilliseconds>401</ElapsedMilliseconds>
+          <ExpectedExceptions />
+          <Status>Passed</Status>
+        </TestUnit>
+      </TestInitialize>
+      <TestCleanup />
+      <Assembly>PerfSuiteTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</Assembly>
+      <Type>PerfSuiteTest.PerfSuiteTestClass</Type>
+      <Name>PerfSuiteTestClass</Name>
+      <Description>Beschreibung der Klasse</Description>
+      <ElapsedMilliseconds>2022</ElapsedMilliseconds>
+    </TestCategory>
+    <TestCategory>
+      <Test>
+        <TestUnit Enabled="true">
+          <MethodInfo>TestWhy</MethodInfo>
+          <Name>TestWhy</Name>
+          <Description>Mein Test</Description>
+          <Thread>3</Thread>
+          <ElapsedMilliseconds>102</ElapsedMilliseconds>
+          <ExpectedExceptions />
+          <Status>Passed</Status>
+        </TestUnit>
+        <TestUnit Enabled="true">
+          <MethodInfo>TestMethod4</MethodInfo>
+          <Name>TestMethod4</Name>
+          <Description>Mein Test 4</Description>
+          <Thread>3</Thread>
+          <ElapsedMilliseconds>400</ElapsedMilliseconds>
+          <ExpectedExceptions />
+          <Status>Passed</Status>
+        </TestUnit>
+      </Test>
+      <TestInitialize>
+        <TestUnit Enabled="true">
+          <MethodInfo>TestMethodInitialize</MethodInfo>
+          <Name>TestMethodInitialize</Name>
+          <Description />
+          <Thread>3</Thread>
+          <ElapsedMilliseconds>201</ElapsedMilliseconds>
+          <ExpectedExceptions />
+          <Status>Passed</Status>
+        </TestUnit>
+      </TestInitialize>
+      <TestCleanup>
+        <TestUnit Enabled="false">
+          <MethodInfo>TestCleanup</MethodInfo>
+          <Name>TestCleanup</Name>
+          <Description />
+          <ElapsedMilliseconds>0</ElapsedMilliseconds>
+          <ExpectedExceptions />
+          <Status>None</Status>
+        </TestUnit>
+      </TestCleanup>
+      <Assembly>UnitTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</Assembly>
+      <Type>UnitTest.UnitTest1</Type>
+      <Name>UnitTest1</Name>
+      <Description />
+      <ElapsedMilliseconds>707</ElapsedMilliseconds>
+    </TestCategory>
+    <TestCategory>
+      <Test>
+        <TestUnit Enabled="true">
+          <MethodInfo>TestMethodException</MethodInfo>
+          <Name>TestMethodException</Name>
+          <Description />
+          <Message>Assert.IsFalse failed. </Message>
+          <Thread>5</Thread>
+          <Exception>System.Reflection.TargetInvocationException: Ein Aufrufziel hat einen Ausnahmefehler verursacht. ---&gt; Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException: Assert.IsFalse failed. 
+   bei Microsoft.VisualStudio.TestTools.UnitTesting.Assert.HandleFailure(String assertionName, String message)
+   bei Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsFalse(Boolean condition)
+   bei UnitTest.UnitTest2.TestMethodException() in c:\Users\Dark\Dropbox\BAG Labs Solution\DevMentor.TestEngine\UnitTest\UnitTest2.cs:Zeile 16.
+   --- Ende der internen Ausnahmestapelüberwachung ---
+   bei System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   bei System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   bei System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   bei System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   bei BAG.PerfSuite.Public.TestFramework.Engine.Executor.&lt;Execute&gt;b__0(TestCategory cat) in c:\Users\Dark\Dropbox\BAG Labs Solution\DevMentor.TestEngine\BAG.PerfSuite.Public.TestFramework\Engine\Executor.cs:Zeile 34.</Exception>
+          <ElapsedMilliseconds>235</ElapsedMilliseconds>
+          <ExpectedExceptions>
+            <string>NotImplementedException</string>
+          </ExpectedExceptions>
+          <Status>Failed</Status>
+        </TestUnit>
+        <TestUnit Enabled="true">
+          <MethodInfo>TestMethodInconclusive</MethodInfo>
+          <Name>TestMethodInconclusive</Name>
+          <Description />
+          <Message>Assert.Inconclusive failed. Oh oh Inconclusive</Message>
+          <Thread>5</Thread>
+          <Exception>System.Reflection.TargetInvocationException: Ein Aufrufziel hat einen Ausnahmefehler verursacht. ---&gt; Microsoft.VisualStudio.TestTools.UnitTesting.AssertInconclusiveException: Assert.Inconclusive failed. Oh oh Inconclusive
+   bei Microsoft.VisualStudio.TestTools.UnitTesting.Assert.Inconclusive(String message, Object[] parameters)
+   bei Microsoft.VisualStudio.TestTools.UnitTesting.Assert.Inconclusive(String message)
+   bei UnitTest.UnitTest2.TestMethodInconclusive() in c:\Users\Dark\Dropbox\BAG Labs Solution\DevMentor.TestEngine\UnitTest\UnitTest2.cs:Zeile 25.
+   --- Ende der internen Ausnahmestapelüberwachung ---
+   bei System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   bei System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   bei System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   bei System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   bei BAG.PerfSuite.Public.TestFramework.Engine.Executor.&lt;Execute&gt;b__0(TestCategory cat) in c:\Users\Dark\Dropbox\BAG Labs Solution\DevMentor.TestEngine\BAG.PerfSuite.Public.TestFramework\Engine\Executor.cs:Zeile 34.</Exception>
+          <ElapsedMilliseconds>502</ElapsedMilliseconds>
+          <ExpectedExceptions />
+          <Status>Inconclusive</Status>
+        </TestUnit>
+        <TestUnit Enabled="false">
+          <MethodInfo>TestMethodIgnore</MethodInfo>
+          <Name>TestMethodIgnore</Name>
+          <Description />
+          <ElapsedMilliseconds>0</ElapsedMilliseconds>
+          <ExpectedExceptions />
+          <Status>None</Status>
+        </TestUnit>
+      </Test>
+      <TestInitialize />
+      <TestCleanup />
+      <Assembly>UnitTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</Assembly>
+      <Type>UnitTest.UnitTest2</Type>
+      <Name>UnitTest2</Name>
+      <Description />
+      <ElapsedMilliseconds>740</ElapsedMilliseconds>
+    </TestCategory>
+  </TestCategorys>
+  <ElapsedMilliseconds>2043</ElapsedMilliseconds>
+</TestContainer>

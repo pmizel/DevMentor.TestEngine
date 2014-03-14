@@ -1,0 +1,7 @@
+C:\Users\Dark\Dropbox\BAG Labs Solution\DevMentor.TestEngine\PerfSuiteTest\bin\Debug\PerfSuiteTest.dll
+C:\Users\Dark\Dropbox\BAG Labs Solution\DevMentor.TestEngine\PerfSuiteTest\bin\Debug\PerfSuiteTest.pdb
+C:\Users\Dark\Dropbox\BAG Labs Solution\DevMentor.TestEngine\PerfSuiteTest\bin\Debug\BAG.PerfSuite.Public.TestFramework.dll
+C:\Users\Dark\Dropbox\BAG Labs Solution\DevMentor.TestEngine\PerfSuiteTest\bin\Debug\BAG.PerfSuite.Public.TestFramework.pdb
+C:\Users\Dark\Dropbox\BAG Labs Solution\DevMentor.TestEngine\PerfSuiteTest\obj\Debug\PerfSuiteTest.csprojResolveAssemblyReference.cache
+C:\Users\Dark\Dropbox\BAG Labs Solution\DevMentor.TestEngine\PerfSuiteTest\obj\Debug\PerfSuiteTest.dll
+C:\Users\Dark\Dropbox\BAG Labs Solution\DevMentor.TestEngine\PerfSuiteTest\obj\Debug\PerfSuiteTest.pdb

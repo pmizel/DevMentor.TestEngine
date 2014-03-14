@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<TestContainer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TestCategorys>
+    <TestCategory>
+      <Test>
+        <TestUnit Enabled="true">
+          <MethodInfo>MethodInconclusive</MethodInfo>
+          <Name>MethodInconclusive</Name>
+          <Description>Beschreibung MethodInconclusive</Description>
+          <ElapsedMilliseconds>0</ElapsedMilliseconds>
+          <ExpectedExceptions />
+          <Status>None</Status>
+        </TestUnit>
+        <TestUnit Enabled="true">
+          <MethodInfo>MethodSuccess</MethodInfo>
+          <Name>MethodSuccess</Name>
+          <Description>Beschreibung MethodSuccess</Description>
+          <ElapsedMilliseconds>0</ElapsedMilliseconds>
+          <ExpectedExceptions />
+          <Status>None</Status>
+        </TestUnit>
+        <TestUnit Enabled="true">
+          <MethodInfo>MethodAreEqual</MethodInfo>
+          <Name>MethodAreEqual</Name>
+          <Description />
+          <ElapsedMilliseconds>0</ElapsedMilliseconds>
+          <ExpectedExceptions />
+          <Status>None</Status>
+        </TestUnit>
+        <TestUnit Enabled="true">
+          <MethodInfo>MethodFail</MethodInfo>
+          <Name>MethodFail</Name>
+          <Description />
+          <ElapsedMilliseconds>0</ElapsedMilliseconds>
+          <ExpectedExceptions />
+          <Status>None</Status>
+        </TestUnit>
+        <TestUnit Enabled="true">
+          <MethodInfo>MethodAreSame</MethodInfo>
+          <Name>MethodAreSame</Name>
+          <Description />
+          <ElapsedMilliseconds>0</ElapsedMilliseconds>
+          <ExpectedExceptions />
+          <Status>None</Status>
+        </TestUnit>
+        <TestUnit Enabled="false">
+          <MethodInfo>TestMethodIgnore</MethodInfo>
+          <Name>TestMethodIgnore</Name>
+          <Description />
+          <ElapsedMilliseconds>0</ElapsedMilliseconds>
+          <ExpectedExceptions />
+          <Status>None</Status>
+        </TestUnit>
+      </Test>
+      <TestInitialize>
+        <TestUnit Enabled="true">
+          <MethodInfo>MethodInit</MethodInfo>
+          <Name>MethodInit</Name>
+          <Description />
+          <ElapsedMilliseconds>0</ElapsedMilliseconds>
+          <ExpectedExceptions />
+          <Status>None</Status>
+        </TestUnit>
+      </TestInitialize>
+      <TestCleanup />
+      <Assembly>PerfSuiteTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</Assembly>
+      <Type>PerfSuiteTest.PerfSuiteTestClass</Type>
+      <Name>PerfSuiteTestClass</Name>
+      <Description>Beschreibung der Klasse</Description>
+      <ElapsedMilliseconds>0</ElapsedMilliseconds>
+    </TestCategory>
+    <TestCategory>
+      <Test>
+        <TestUnit Enabled="true">
+          <MethodInfo>TestWhy</MethodInfo>
+          <Name>TestWhy</Name>
+          <Description>Mein Test</Description>
+          <ElapsedMilliseconds>0</ElapsedMilliseconds>
+          <ExpectedExceptions />
+          <Status>None</Status>
+        </TestUnit>
+        <TestUnit Enabled="true">
+          <MethodInfo>TestMethod4</MethodInfo>
+          <Name>TestMethod4</Name>
+          <Description>Mein Test 4</Description>
+          <ElapsedMilliseconds>0</ElapsedMilliseconds>
+          <ExpectedExceptions />
+          <Status>None</Status>
+        </TestUnit>
+      </Test>
+      <TestInitialize>
+        <TestUnit Enabled="true">
+          <MethodInfo>TestMethodInitialize</MethodInfo>
+          <Name>TestMethodInitialize</Name>
+          <Description />
+          <ElapsedMilliseconds>0</ElapsedMilliseconds>
+          <ExpectedExceptions />
+          <Status>None</Status>
+        </TestUnit>
+      </TestInitialize>
+      <TestCleanup>
+        <TestUnit Enabled="false">
+          <MethodInfo>TestCleanup</MethodInfo>
+          <Name>TestCleanup</Name>
+          <Description />
+          <ElapsedMilliseconds>0</ElapsedMilliseconds>
+          <ExpectedExceptions />
+          <Status>None</Status>
+        </TestUnit>
+      </TestCleanup>
+      <Assembly>UnitTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</Assembly>
+      <Type>UnitTest.UnitTest1</Type>
+      <Name>UnitTest1</Name>
+      <Description />
+      <ElapsedMilliseconds>0</ElapsedMilliseconds>
+    </TestCategory>
+    <TestCategory>
+      <Test>
+        <TestUnit Enabled="true">
+          <MethodInfo>TestMethodException</MethodInfo>
+          <Name>TestMethodException</Name>
+          <Description />
+          <ElapsedMilliseconds>0</ElapsedMilliseconds>
+          <ExpectedExceptions>
+            <string>NotImplementedException</string>
+          </ExpectedExceptions>
+          <Status>None</Status>
+        </TestUnit>
+        <TestUnit Enabled="true">
+          <MethodInfo>TestMethodInconclusive</MethodInfo>
+          <Name>TestMethodInconclusive</Name>
+          <Description />
+          <ElapsedMilliseconds>0</ElapsedMilliseconds>
+          <ExpectedExceptions />
+          <Status>None</Status>
+        </TestUnit>
+        <TestUnit Enabled="false">
+          <MethodInfo>TestMethodIgnore</MethodInfo>
+          <Name>TestMethodIgnore</Name>
+          <Description />
+          <ElapsedMilliseconds>0</ElapsedMilliseconds>
+          <ExpectedExceptions />
+          <Status>None</Status>
+        </TestUnit>
+      </Test>
+      <TestInitialize />
+      <TestCleanup />
+      <Assembly>UnitTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</Assembly>
+      <Type>UnitTest.UnitTest2</Type>
+      <Name>UnitTest2</Name>
+      <Description />
+      <ElapsedMilliseconds>0</ElapsedMilliseconds>
+    </TestCategory>
+  </TestCategorys>
+  <ElapsedMilliseconds>0</ElapsedMilliseconds>
+</TestContainer>
