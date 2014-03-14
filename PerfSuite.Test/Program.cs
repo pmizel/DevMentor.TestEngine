@@ -57,8 +57,6 @@ namespace PerfSuite.Test
 
             //Console.ForegroundColor = ConsoleColor.Yellow;
             //Console.Write(" Inconclusive: " + con.InconclusiveCounter());
-
-           
         }
 
         static void Main(string[] args)
