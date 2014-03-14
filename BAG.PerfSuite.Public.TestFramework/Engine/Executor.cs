@@ -19,6 +19,7 @@ namespace BAG.PerfSuite.Public.TestFramework.Engine
         public TestContainer Execute(TestContainer container)
         {
             Stopwatch swContainer = Stopwatch.StartNew();
+            //foreach (var cat in con.TestCategorys)
             container.TestCategorys.AsParallel().ForAll(cat =>
             {
                 var instance = Activator.CreateInstance(cat.Assembly, cat.Type).Unwrap();
@@ -54,7 +55,6 @@ namespace BAG.PerfSuite.Public.TestFramework.Engine
                         test.ElapsedMilliseconds = swTest.ElapsedMilliseconds;
                         test.Thread = Thread.CurrentThread.ManagedThreadId.ToString();
                     }
-                    //}
                 });
                 swCategory.Stop();
                 cat.ElapsedMilliseconds = swCategory.ElapsedMilliseconds;
@@ -63,37 +63,6 @@ namespace BAG.PerfSuite.Public.TestFramework.Engine
             swContainer.Stop();
             container.ElapsedMilliseconds = swContainer.ElapsedMilliseconds;
             return container;
-
-            //foreach (var cat in con.TestCategorys)
-            //{
-            //    var instance = Activator.CreateInstance(cat.Assembly, cat.Type).Unwrap();
-            //    foreach (var test in cat.AllTests)
-            //    {
-            //        Stopwatch sw = Stopwatch.StartNew();
-            //        try
-            //        {
-            //            var mi = instance.GetType().GetMethod(test.MethodInfo);
-            //            mi.Invoke(instance, new object[] { });
-            //            test.Status = TestStatus.Passed;
-            //        }
-            //        catch (Exception ex)
-            //        {
-            //            if (ex.IsInconclusive())
-            //                test.Status = TestStatus.Inconclusive;
-            //            else if (ex.IsExpectedException(test.ExpectedExceptions))
-            //                test.Status = TestStatus.PassedExpectedException;
-            //            else if (ex.IsFailed())
-            //                test.Status = TestStatus.Failed;
-            //            else
-            //                test.Status = TestStatus.FailedUnhandledException;
-            //            Console.WriteLine(ex.GetMessage());
-            //            test.Exception = ex.ToString();
-            //            test.Message = ex.GetMessage();
-            //        }
-            //        sw.Stop();
-            //        test.ElapsedMilliseconds = sw.ElapsedMilliseconds;
-            //    }
-            //}
         }
     }
 }
