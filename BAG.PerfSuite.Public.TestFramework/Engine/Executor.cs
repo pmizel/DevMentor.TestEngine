@@ -23,36 +23,39 @@ namespace BAG.PerfSuite.Public.TestFramework.Engine
             {
                 var instance = Activator.CreateInstance(cat.Assembly, cat.Type).Unwrap();
                 Stopwatch swCategory = Stopwatch.StartNew();
-                foreach (var test in cat.AllTests)
+                //foreach (var test in cat.AllTests)
+                cat.AllTests.AsParallel().ForAll(test =>
                 {
-                    if (!test.Enabled)
-                        continue;
-                    Stopwatch swTest = Stopwatch.StartNew();
-                    try
+                    if (test.Enabled)
                     {
-                        var mi = instance.GetType().GetMethod(test.MethodInfo);
-                        mi.Invoke(instance, new object[] { });
-                        test.Status = TestStatus.Passed;
-                    }
-                    catch (Exception ex)
-                    {
-                        if (ex.IsInconclusive())
-                            test.Status = TestStatus.Inconclusive;
-                        else if (ex.IsExpectedException(test.ExpectedExceptions))
-                            test.Status = TestStatus.PassedExpectedException;
-                        else if (ex.IsFailed())
-                            test.Status = TestStatus.Failed;
-                        else
-                            test.Status = TestStatus.FailedUnhandledException;
+                        Stopwatch swTest = Stopwatch.StartNew();
+                        try
+                        {
+                            var mi = instance.GetType().GetMethod(test.MethodInfo);
+                            mi.Invoke(instance, new object[] { });
+                            test.Status = TestStatus.Passed;
+                        }
+                        catch (Exception ex)
+                        {
+                            if (ex.IsInconclusive())
+                                test.Status = TestStatus.Inconclusive;
+                            else if (ex.IsExpectedException(test.ExpectedExceptions))
+                                test.Status = TestStatus.PassedExpectedException;
+                            else if (ex.IsFailed())
+                                test.Status = TestStatus.Failed;
+                            else
+                                test.Status = TestStatus.FailedUnhandledException;
 
-                        //Console.WriteLine(ex.GetMessage());
-                        test.Exception = ex.ToString();
-                        test.Message = ex.GetMessage();
+                            //Console.WriteLine(ex.GetMessage());
+                            test.Exception = ex.ToString();
+                            test.Message = ex.GetMessage();
+                        }
+                        swTest.Stop();
+                        test.ElapsedMilliseconds = swTest.ElapsedMilliseconds;
+                        test.Thread = Thread.CurrentThread.ManagedThreadId.ToString();
                     }
-                    swTest.Stop();
-                    test.ElapsedMilliseconds = swTest.ElapsedMilliseconds;
-                    test.Thread = Thread.CurrentThread.ManagedThreadId.ToString();
-                }
+                    //}
+                });
                 swCategory.Stop();
                 cat.ElapsedMilliseconds = swCategory.ElapsedMilliseconds;
 
