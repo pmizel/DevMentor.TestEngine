@@ -1,9 +1,9 @@
 DevMentor.TestEngine
 ====================
 
-Fast and parallel testengine to support different test frameworks
+fast and parallel testengine written in c# to support different test frameworks 
 
-NUnit, VisualStudio UnitTest, MSTest, PerfSuite.Test ...
+NUnit, VisualStudio UnitTest, MSTest, PerfSuite.Test, ...
 
 
 ###one line of code
