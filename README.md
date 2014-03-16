@@ -20,6 +20,9 @@ NUnit, VisualStudio UnitTest, MSTest, PerfSuite.Test, ...
  
  result.TestCategorys.ForEach(c => c.AllTests.ToList().ForEach(t =>
  {
+     Console.ForegroundColor = t.Status.IsFailed() ?
+                    ConsoleColor.Red : t.Status.IsPassed() ?
+                    ConsoleColor.Green : ConsoleColor.Yellow;
      Console.WriteLine(string.Format("{0} [{1}] {2} ({3}ms)",
           t.Name,
           t.Status.ToString(),
