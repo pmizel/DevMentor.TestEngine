@@ -12,26 +12,30 @@ NUnit, VisualStudio UnitTest, MSTest, PerfSuite.Test, ...
 ```
 ```cs
  //output
- Console.WriteLine(string.Format("Status: Failed: {0} Passed: {1} Inconclusive: {2} ({3}ms)",
+ result.TestCategorys.ForEach(c => c.AllTests.ToList().ForEach(t =>
+ {
+     Console.ForegroundColor = t.Status.IsFailed() ?
+         ConsoleColor.Red : t.Status.IsPassed() ?
+         ConsoleColor.Green : ConsoleColor.Yellow;
+     Console.WriteLine(string.Format("{0} [{1}] {2} ({3}ms)",
+             t.Name,
+             t.Status.ToString(),
+             t.Message,
+             t.ElapsedMilliseconds));
+ }));
+ Console.ForegroundColor = ConsoleColor.Gray;
+ Console.WriteLine(string.Format("Status [ {0} Failed | {1} Passed | {2} Inconclusive ]  ({3}ms)",
      result.FailedCounter(),
      result.PassedCounter(),
      result.InconclusiveCounter(),
      result.ElapsedMilliseconds));
- 
- result.TestCategorys.ForEach(c => c.AllTests.ToList().ForEach(t =>
- {
-     Console.ForegroundColor = t.Status.IsFailed() ?
-                    ConsoleColor.Red : t.Status.IsPassed() ?
-                    ConsoleColor.Green : ConsoleColor.Yellow;
-     Console.WriteLine(string.Format("{0} [{1}] {2} ({3}ms)",
-          t.Name,
-          t.Status.ToString(),
-          t.Message,
-          t.ElapsedMilliseconds));
- }));
- //Status: Failed: 4 Passed: 5 Inconclusive: 2 (1202ms)
- //MethodInconclusive [Inconclusive] Assert.Inconclusive <My Comment> (456ms)
- //...
+ /*
+  TestMethodInitialize [Passed]  (1ms)
+  TestMethodFail [Failed] Assert.Fail failed.  (2930ms)
+  TestMethodInconclusive [Inconclusive] Assert.Inconclusive failed.  (2931ms)
+  TestMethodCleanup [Passed]  (0ms)
+  Status [ 1 Failed | 2 Passed | 1 Inconclusive ]  (2972ms)
+ */
 ```
 
 ###Collector
